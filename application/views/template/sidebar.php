@@ -69,9 +69,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-table"></i>
+                        <i class="nav-icon fas fa-database"></i>
                         <p>
-                            Proses Fuzzy
+                            Mater Data
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
