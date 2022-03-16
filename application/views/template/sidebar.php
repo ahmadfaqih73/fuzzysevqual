@@ -36,39 +36,8 @@
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <a href="<?= base_url('Mahasiswa/view_mhs'); ?>" class="nav-link active">
-                        <i class="nav-icon fas fa-user-graduate"></i>
-                        <p>
-                            Mahasiswa
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">
-                        <i class="nav-icon fas fa-table"></i>
-                        <p>
-                            Rule
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="<?= base_url('Data_variable/index') ?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Variable</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url('Rules/index') ?>" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Himpunan Fuzzy</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-database"></i>
                         <p>
                             Mater Data
@@ -77,9 +46,17 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('Fuzzyfikasi/index') ?>" class="nav-link">
+                            <a href="<?= base_url('Dimensi/index') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Input Nilai</p>
+                                <p>Dimensi</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('Variabel/index') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Variabel</p>
                             </a>
                         </li>
                     </ul>
@@ -87,27 +64,51 @@
                         <li class="nav-item">
                             <a href="<?= base_url('Hasil/lihat_fuzyfikasi') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>hasil fuzzyfikasi</p>
+                                <p>Pernyataan Harapan</p>
                             </a>
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('Hasil/lihat_implikasi') ?>" class="nav-link">
+                            <a href="<?= base_url('Hasil/lihat_fuzyfikasi') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>hasil implikasi</p>
+                                <p>Pernyataan Persepsi</p>
                             </a>
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('Hasil/index') ?>" class="nav-link">
+                            <a href="<?= base_url('Hasil/lihat_fuzyfikasi') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Hasil</p>
+                                <p>Rule</p>
                             </a>
                         </li>
                     </ul>
-
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-square-question"></i>
+                        <p>
+                            Question
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('Kuisioner_Harapan/index') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kuisioner Harapan</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('Hasil/lihat_fuzyfikasi') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Kuisioner Persepsi</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
 
             </ul>
