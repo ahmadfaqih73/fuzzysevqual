@@ -41,4 +41,24 @@ class Model_Dimensi extends CI_Model
             redirect('Dimensi', 'refresh');
         }
     }
+    public function tambah_dimensi(){
+        $namadimensi= $this->input->post('namadimensi');
+        $data=array(
+            'Nama_dimensi'=>$namadimensi
+        );
+        $q_insert= $this->db->insert('dimensi',$data);
+        if ($q_insert) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Berhasil!</strong> Data sukses maksuk...
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>');
+            redirect('Dimensi', 'refresh');
+        } else {
+            redirect('Dimensi', 'refresh');
+        }
+    }
+
+    
 }

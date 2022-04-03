@@ -4,23 +4,16 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0">Dimensi</h1>
+                <div class="col-sm-10">
+                    <h1 class="m-0">Kepuasan</h1>
+
                     <section class="content">
 
 
                         <!-- Default box -->
                         <div class="card">
                             <div class="card-header">
-                                <div class="card-tools ">
-                                    <a href="<?= base_url(); ?>Dimensi/viewadd" class="btn btn-primary t">Tambah data</a>
-                                    <!-- <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                        <i class="fas fa-times"></i>
-                                    </button> -->
-                                </div>
+                                <a href="<?= base_url(); ?>Kepuasan/viewadd" class="btn btn-primary ">Tambah data</a>
                             </div>
                             <div class="card-body p-0">
                                 <?php
@@ -33,28 +26,40 @@
                                                 No
                                             </th>
                                             <th style="width: 20%">
-                                                Nama Dimensi
+                                                Kepuasan
                                             </th>
                                             <th style="width: 20%">
-                                                Status
+                                                Alias
+                                            </th>
+                                            <th style="width: 20%">
+                                                Nilai
+                                            </th>
+                                            <th style="width: 20%">
+                                                Action
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php
                                         $no = 0;
-                                        foreach ($baca_dimensi as $bc) {
+                                        foreach ($kepuasan as $k) {
                                         ?>
                                             <tr>
                                                 <td>
                                                     <?php echo ++$no ?>
                                                 </td>
                                                 <td>
-                                                    <?php echo $bc['Nama_dimensi'] ?>
+                                                    <?php echo $k['Kepuasan'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $k['Alias'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $k['Nilai'] ?>
                                                 </td>
 
                                                 <td class="project-actions text-center">
-                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#updatedimensi<?= $bc['id_dimensi'] ?>">
+                                                    <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#updatekepuasan<?= $k['id_kepuasaan'] ?>">
                                                         <i class="fas fa-pencil-alt">
                                                         </i>
                                                         Edit
@@ -64,31 +69,39 @@
                                                         </i>
                                                         Edit
                                                     </a> -->
-                                                    <a class="btn btn-danger btn-sm" href="<?= base_url(); ?>Dimensi/hapus/<?= $bc['id_dimensi']; ?>">
+                                                    <a class="btn btn-danger btn-sm" href="<?= base_url(); ?>Kepuasan/hapus/<?= $k['id_kepuasaan'] ?>">
                                                         <i class="fas fa-trash">
                                                         </i>
                                                         Delete
                                                     </a>
                                                 </td>
                                                 <!-- Modal  Update-->
-                                                <div class="modal fade" id="updatedimensi<?= $bc['id_dimensi'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="updatekepuasan<?= $k['id_kepuasaan'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog" role="document">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Update Dimensi</h5>
+                                                                <h5 class="modal-title" id="exampleModalLabel">Update Kepuasan</h5>
                                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form class="col-md-6" method="post" action="<?php echo base_url('Dimensi/ubah') ?>">
+                                                                <form class="col-md-6" method="post" action="<?php echo base_url('Kepuasan/ubah') ?>">
 
-                                                                    <!-- Id Pelanggan -->
-                                                                    <input type="hidden" name="id_dimensi" value="<?php echo $bc['id_dimensi'] ?>">
+                                                                    <!-- Id Kepuasan -->
+                                                                    <input type="hidden" name="id_kepuasan" value="<?php echo $k['id_kepuasaan'] ?>">
 
                                                                     <div class="form-group">
-                                                                        <label>nama dimensi</label>
-                                                                        <input type="text" class="form-control" name="namadimensi" required="" value="<?php echo $bc['Nama_dimensi'] ?>">
+                                                                        <label>Kepuasan</label>
+                                                                        <input type="text" class="form-control" name="kepuasan" required="" value="<?php echo $k['Kepuasan'] ?>">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label>Alias</label>
+                                                                        <input type="text" class="form-control" name="alias" required="" value="<?php echo $k['Alias'] ?>">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label>Nilai</label>
+                                                                        <input type="text" class="form-control" name="Nilai" required="" value="<?php echo $k['Nilai'] ?>">
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
