@@ -11,7 +11,7 @@
  Target Server Version : 100420
  File Encoding         : 65001
 
- Date: 03/04/2022 13:22:10
+ Date: 07/04/2022 12:15:01
 */
 
 SET NAMES utf8mb4;
@@ -58,6 +58,125 @@ INSERT INTO `kepuasan` VALUES (4, 'S', 'Setuju', 1);
 INSERT INTO `kepuasan` VALUES (6, 'SS', 'Sangat Setuju', 1);
 
 -- ----------------------------
+-- Table structure for kuisioner
+-- ----------------------------
+DROP TABLE IF EXISTS `kuisioner`;
+CREATE TABLE `kuisioner`  (
+  `id_kuisioner` int(11) NOT NULL AUTO_INCREMENT,
+  `id_pernyataan` int(11) NULL DEFAULT NULL,
+  `user_id` int(11) NULL DEFAULT NULL,
+  `dimensi_id` int(11) NULL DEFAULT NULL,
+  `created_at` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `Jenis` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `kepuasan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id_kuisioner`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 101 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of kuisioner
+-- ----------------------------
+INSERT INTO `kuisioner` VALUES (1, 1, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'KTS');
+INSERT INTO `kuisioner` VALUES (2, 2, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (3, 3, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (4, 4, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (5, 5, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'S');
+INSERT INTO `kuisioner` VALUES (6, 6, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (7, 7, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'S');
+INSERT INTO `kuisioner` VALUES (8, 8, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (9, 9, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'KTS');
+INSERT INTO `kuisioner` VALUES (10, 10, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (11, 11, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'S');
+INSERT INTO `kuisioner` VALUES (12, 12, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (13, 13, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'SS');
+INSERT INTO `kuisioner` VALUES (14, 14, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (15, 15, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (16, 16, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (17, 17, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'KTS');
+INSERT INTO `kuisioner` VALUES (18, 18, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (19, 19, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (20, 20, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'KTS');
+INSERT INTO `kuisioner` VALUES (21, 21, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (22, 22, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (23, 23, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'S');
+INSERT INTO `kuisioner` VALUES (24, 24, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (25, 25, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (26, 2, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'KTS');
+INSERT INTO `kuisioner` VALUES (27, 3, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (28, 4, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (29, 5, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (30, 6, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (31, 7, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (32, 8, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (33, 9, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (34, 10, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (35, 11, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (36, 12, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (37, 13, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (38, 14, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (39, 15, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (40, 16, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (41, 17, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (42, 18, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (43, 19, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (44, 20, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (45, 21, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (46, 22, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (47, 23, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (48, 24, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (49, 25, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (50, 26, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (51, 1, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'KTS');
+INSERT INTO `kuisioner` VALUES (52, 2, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (53, 3, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (54, 4, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (55, 5, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (56, 6, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (57, 7, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (58, 8, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (59, 9, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (60, 10, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'S');
+INSERT INTO `kuisioner` VALUES (61, 11, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (62, 12, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (63, 13, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (64, 14, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (65, 15, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (66, 16, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (67, 17, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (68, 18, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (69, 19, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (70, 20, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (71, 21, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (72, 22, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (73, 23, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'KS');
+INSERT INTO `kuisioner` VALUES (74, 24, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'S');
+INSERT INTO `kuisioner` VALUES (75, 25, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'CS');
+INSERT INTO `kuisioner` VALUES (76, 2, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'KTS');
+INSERT INTO `kuisioner` VALUES (77, 3, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (78, 4, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (79, 5, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (80, 6, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (81, 7, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (82, 8, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (83, 9, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (84, 10, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (85, 11, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (86, 12, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (87, 13, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (88, 14, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (89, 15, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'SS');
+INSERT INTO `kuisioner` VALUES (90, 16, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'S');
+INSERT INTO `kuisioner` VALUES (91, 17, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (92, 18, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (93, 19, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (94, 20, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (95, 21, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (96, 22, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (97, 23, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (98, 24, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+INSERT INTO `kuisioner` VALUES (99, 25, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'KS');
+INSERT INTO `kuisioner` VALUES (100, 26, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'CS');
+
+-- ----------------------------
 -- Table structure for pelanggan
 -- ----------------------------
 DROP TABLE IF EXISTS `pelanggan`;
@@ -81,31 +200,31 @@ CREATE TABLE `pernyataan_harapan`  (
 -- ----------------------------
 -- Records of pernyataan_harapan
 -- ----------------------------
-INSERT INTO `pernyataan_harapan` VALUES (3, 1, 'packaging/kemasan selalu rapi');
-INSERT INTO `pernyataan_harapan` VALUES (4, 1, 'packing paket selalu aman');
-INSERT INTO `pernyataan_harapan` VALUES (5, 1, 'barang tidak pernah lecet/rusak');
-INSERT INTO `pernyataan_harapan` VALUES (6, 1, 'penjual selalu mengirim barang sesuai pesanan');
-INSERT INTO `pernyataan_harapan` VALUES (7, 1, 'penjual selalu mencantumkan alamat pada paket dengan benar');
-INSERT INTO `pernyataan_harapan` VALUES (8, 2, 'ketika sudah membuat sebuah kesepakatan, penjual menepati');
-INSERT INTO `pernyataan_harapan` VALUES (9, 2, 'ketika ada masalah, penjual membantu memberikan solusi');
-INSERT INTO `pernyataan_harapan` VALUES (10, 2, 'penjual memiliki pencatatan/rincian pesanan yang akurat');
-INSERT INTO `pernyataan_harapan` VALUES (11, 2, 'kiriman paket datang tepat waktu sesuai perkiraan');
-INSERT INTO `pernyataan_harapan` VALUES (13, 2, 'penjual dapat dipercaya tentang kualitas produk');
-INSERT INTO `pernyataan_harapan` VALUES (14, 3, 'penjual menjawab pesan chat dengan cepat');
-INSERT INTO `pernyataan_harapan` VALUES (15, 3, 'penjual selalu bersikap sopan');
-INSERT INTO `pernyataan_harapan` VALUES (16, 3, 'penjual memiliki pengetahuan yang akurat terhadap produk');
-INSERT INTO `pernyataan_harapan` VALUES (17, 3, 'saat ada keluhan, penjual dengan sigap menyelesaikan');
-INSERT INTO `pernyataan_harapan` VALUES (18, 3, 'saat berkonsultasi, penjual memberikan solusi dengan tepat');
-INSERT INTO `pernyataan_harapan` VALUES (19, 4, 'penjual memberikan keamanan saat bertransaksi');
-INSERT INTO `pernyataan_harapan` VALUES (20, 4, 'penjual menjamin kualitas produk selalu bagus');
-INSERT INTO `pernyataan_harapan` VALUES (21, 4, 'penjual menjamin kelebihan produk sesuai dengan yang di katakan');
-INSERT INTO `pernyataan_harapan` VALUES (22, 4, 'jika ada kesalahan/kerusakan produk penjual mengganti dengan yang baru');
-INSERT INTO `pernyataan_harapan` VALUES (23, 4, 'penjual berkata jujur kelebihan dan kekurangan produk');
-INSERT INTO `pernyataan_harapan` VALUES (24, 11, 'penjual memberikan perhatian pada pelanggan');
-INSERT INTO `pernyataan_harapan` VALUES (25, 11, 'penjual selalu membuat nyaman saat berkomunikasi');
-INSERT INTO `pernyataan_harapan` VALUES (26, 11, 'penjual mengutamakan kepentingan pelanggan');
-INSERT INTO `pernyataan_harapan` VALUES (27, 11, 'penjual memahami kebutuhan pelanggan');
-INSERT INTO `pernyataan_harapan` VALUES (28, 11, 'penjual selalu bertanya keluhan/keinginan pelanggan');
+INSERT INTO `pernyataan_harapan` VALUES (1, 1, 'packaging/kemasan selalu rapi');
+INSERT INTO `pernyataan_harapan` VALUES (2, 1, 'packing paket selalu aman');
+INSERT INTO `pernyataan_harapan` VALUES (3, 1, 'barang tidak pernah lecet/rusak');
+INSERT INTO `pernyataan_harapan` VALUES (4, 1, 'penjual selalu mengirim barang sesuai pesanan');
+INSERT INTO `pernyataan_harapan` VALUES (5, 1, 'penjual selalu mencantumkan alamat pada paket dengan benar');
+INSERT INTO `pernyataan_harapan` VALUES (6, 2, 'ketika sudah membuat sebuah kesepakatan, penjual menepati');
+INSERT INTO `pernyataan_harapan` VALUES (7, 2, 'ketika ada masalah, penjual membantu memberikan solusi');
+INSERT INTO `pernyataan_harapan` VALUES (8, 2, 'penjual memiliki pencatatan/rincian pesanan yang akurat');
+INSERT INTO `pernyataan_harapan` VALUES (9, 2, 'kiriman paket datang tepat waktu sesuai perkiraan');
+INSERT INTO `pernyataan_harapan` VALUES (10, 2, 'penjual dapat dipercaya tentang kualitas produk');
+INSERT INTO `pernyataan_harapan` VALUES (11, 3, 'penjual menjawab pesan chat dengan cepat');
+INSERT INTO `pernyataan_harapan` VALUES (12, 3, 'penjual selalu bersikap sopan');
+INSERT INTO `pernyataan_harapan` VALUES (13, 3, 'penjual memiliki pengetahuan yang akurat terhadap produk');
+INSERT INTO `pernyataan_harapan` VALUES (14, 3, 'saat ada keluhan, penjual dengan sigap menyelesaikan');
+INSERT INTO `pernyataan_harapan` VALUES (15, 3, 'saat berkonsultasi, penjual memberikan solusi dengan tepat');
+INSERT INTO `pernyataan_harapan` VALUES (16, 4, 'penjual memberikan keamanan saat bertransaksi');
+INSERT INTO `pernyataan_harapan` VALUES (17, 4, 'penjual menjamin kualitas produk selalu bagus');
+INSERT INTO `pernyataan_harapan` VALUES (18, 4, 'penjual menjamin kelebihan produk sesuai dengan yang di katakan');
+INSERT INTO `pernyataan_harapan` VALUES (19, 4, 'jika ada kesalahan/kerusakan produk penjual mengganti dengan yang baru');
+INSERT INTO `pernyataan_harapan` VALUES (20, 4, 'penjual berkata jujur kelebihan dan kekurangan produk');
+INSERT INTO `pernyataan_harapan` VALUES (21, 11, 'penjual memberikan perhatian pada pelanggan');
+INSERT INTO `pernyataan_harapan` VALUES (22, 11, 'penjual selalu membuat nyaman saat berkomunikasi');
+INSERT INTO `pernyataan_harapan` VALUES (23, 11, 'penjual mengutamakan kepentingan pelanggan');
+INSERT INTO `pernyataan_harapan` VALUES (24, 11, 'penjual memahami kebutuhan pelanggan');
+INSERT INTO `pernyataan_harapan` VALUES (25, 11, 'penjual selalu bertanya keluhan/keinginan pelanggan');
 
 -- ----------------------------
 -- Table structure for pernyataan_persepsi
