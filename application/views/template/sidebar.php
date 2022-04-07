@@ -40,7 +40,7 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-database"></i>
                         <p>
-                            Mater Data
+                            Master Data
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
