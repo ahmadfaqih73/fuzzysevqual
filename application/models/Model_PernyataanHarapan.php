@@ -55,6 +55,8 @@
        }
         public function read_pertanyaan()
         {
-            return $this->db->query("SELECT id_pernyataan_harapan,Nama_dimensi, Pernyataan_harapan FROM pernyataan_harapan JOIN dimensi ON dimensi.id_dimensi = pernyataan_harapan.Antribut ORDER BY id_dimensi ASC;")->result_array();
+            // return $this->db->query("SELECT id_pernyataan_harapan,Nama_dimensi, Pernyataan_harapan FROM pernyataan_harapan JOIN dimensi ON dimensi.id_dimensi = pernyataan_harapan.Antribut ORDER BY id_dimensi ASC;")->result_array();
+            $this->db->join('dimensi', 'dimensi.id_dimensi = pernyataan_harapan.Antribut');
+            return $this->db->get('pernyataan_harapan')->result();
         }
    }
