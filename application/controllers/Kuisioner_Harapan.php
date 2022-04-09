@@ -23,7 +23,7 @@ class Kuisioner_Harapan extends CI_Controller
             $id_dimensi = $_POST['Atribut' . $i];
             $nama = $_POST['nama'];
             $data = [
-                'id_pernyataan' => $post['id_pertanyaan'][$i],
+                'pernyataan_idharapan' => $post['id_pertanyaan'][$i],
                 // 'user_id' => $this->session->userdata('userId'),
                 'user_id' => $nama,
                 'dimensi_id' => $id_dimensi,
@@ -36,7 +36,7 @@ class Kuisioner_Harapan extends CI_Controller
             // echo "<pre> ";
             // print_r($data);
             // echo "</pre>";
-            $qry = $this->db->insert('kuisioner', $data);
+            $qry = $this->db->insert('kuisioner_harapan', $data);
          
           
 

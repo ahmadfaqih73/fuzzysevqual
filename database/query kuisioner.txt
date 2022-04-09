@@ -1,0 +1,70 @@
+1. mencari jawaban tiap jenis quisioner
+SELECT
+    id_pernyataan, 
+   Jenis,  
+    kepuasan,      COUNT(kepuasan),
+		SUM(kepuasan) as Total,  COUNT(kepuasan)
+FROM
+   kuisioner
+WHERE Jenis= 'Harapan'
+GROUP BY
+    id_pernyataan, 
+    Jenis , 
+    kepuasan,
+		Total
+HAVING 
+    COUNT(kepuasan);
+2. mencari jawaban per antribut
+SELECT
+Jenis, 
+   Pernyataan_harapan, 
+    	 Nama_dimensi,
+    kepuasan,      COUNT(kepuasan)
+FROM
+   kuisioner
+	 JOIN dimensi ON dimensi.id_dimensi = kuisioner.dimensi_id
+	 JOIN pernyataan_harapan ON pernyataan_harapan.id_pernyataan_harapan = kuisioner.id_pernyataan
+	 WHERE Jenis= 'Harapan'
+GROUP BY
+    Pernyataan_harapan, 
+    Jenis , 
+    kepuasan,
+		id_dimensi DESC
+	HAVING 
+    COUNT(kepuasan);
+3. 
+SELECT
+Jenis, 
+   Pernyataan_harapan, 
+    	 Nama_dimensi,
+    kepuasan,      COUNT(kepuasan)
+FROM
+   kuisioner
+	 JOIN dimensi ON dimensi.id_dimensi = kuisioner.dimensi_id
+	 JOIN pernyataan_harapan ON pernyataan_harapan.id_pernyataan_harapan = kuisioner.id_pernyataan
+	 WHERE Jenis= 'Harapan'
+GROUP BY
+    Pernyataan_harapan, 
+    Jenis , 
+    kepuasan,
+		id_dimensi ASC
+	HAVING 
+    COUNT(kepuasan);
+4.
+SELECT
+Pernyataan_harapan,
+Jenis, 
+     Nama_dimensi,
+    kepuasan,      COUNT(kepuasan)
+FROM
+kuisioner_harapan
+	 JOIN dimensi ON dimensi.id_dimensi = kuisioner_harapan.dimensi_id
+ JOIN pernyataan_harapan ON pernyataan_harapan.id_pernyataan_harapan = kuisioner_harapan.pernyataan_idharapan
+	
+GROUP BY
+   Pernyataan_harapan,
+    Jenis , 
+    kepuasan,
+		id_dimensi 
+	HAVING 
+    COUNT(kepuasan);

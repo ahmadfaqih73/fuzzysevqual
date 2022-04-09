@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/summernote/summernote-bs4.min.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/select2/css/select2.min.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('assets/select2/css/select2-bootstrap4.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('assets/dataTables/css/dataTables.bootstrap4.min.css') ?>" />
 
 
 

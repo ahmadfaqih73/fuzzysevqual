@@ -59,4 +59,24 @@
             $this->db->join('dimensi', 'dimensi.id_dimensi = pernyataan_harapan.Antribut');
             return $this->db->get('pernyataan_harapan')->result();
         }
+        public function fuzzyfikasi_harapan(){
+            return $this->db->query("SELECT
+
+Pernyataan_harapan,
+Jenis, 
+     Nama_dimensi,
+    kepuasan,      COUNT(kepuasan)
+FROM
+kuisioner_harapan
+	 JOIN dimensi ON dimensi.id_dimensi = kuisioner_harapan.dimensi_id
+ JOIN pernyataan_harapan ON pernyataan_harapan.id_pernyataan_harapan = kuisioner_harapan.pernyataan_idharapan
+	 WHERE Jenis= 'Harapan'
+GROUP BY
+   Pernyataan_harapan,
+    Jenis , 
+    kepuasan,
+		id_dimensi 
+	HAVING 
+    COUNT(kepuasan);")->result_array();
+        }
    }

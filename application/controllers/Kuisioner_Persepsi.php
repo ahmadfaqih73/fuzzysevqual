@@ -23,20 +23,20 @@ public function index(){
                         $nama =$_POST['nama'];
 
                         $data = [
-                                'id_pernyataan' => $post['id_pertanyaan'][$i],
+                                'id_pernyataan_persepsi' => $post['id_pertanyaan'][$i],
                                 // 'user_id' => $this->session->userdata('userId'),
                                 'user_id'=>$nama,
                                 'dimensi_id' => $id_dimensi,
                                 'kepuasan' => $kepuasan,
                                 'created_at' => date('Y-m-d H:i:s'),
 
-                                'jenis' => 'Persepsi'
+                                'Jenis' => 'Persepsi'
                         ];
 
                         // echo "<pre> ";
                         // print_r($data);
                         // echo "</pre>";
-                       $qry=$this->db->insert('kuisioner', $data);
+                       $qry=$this->db->insert('kuisioner_persepsi', $data);
                      
 
                 }
