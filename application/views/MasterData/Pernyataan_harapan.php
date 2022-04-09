@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-10">
-                    <h1 class="m-0">Pertanyaan Quisioner Harapan</h1>
+                    <h1 class="m-0">Pernyataan Quisioner Harapan</h1>
                     <section class="content">
 
                         <!-- Default box -->
