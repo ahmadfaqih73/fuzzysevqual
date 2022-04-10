@@ -120,7 +120,23 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('Fuzzyfikasi_Harapan/index') ?>" class="nav-link">
+                            <a href="<?= base_url('Rekapitulasi_Harapan/index') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Rekapitulas Harapan</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('Rekapitulasi_Persepsi/index') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Rekapitulasi Persepsi</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url('Fuzzyfikasi_harapan/index') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Fuzzyfikasi Harapan</p>
                             </a>
@@ -128,7 +144,7 @@
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('Fuzzyfikasi_Persepsi/index') ?>" class="nav-link">
+                            <a href="<?= base_url('Fuzzyfikasi_persepsi/index') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Fuzzyfikasi Persepsi</p>
                             </a>

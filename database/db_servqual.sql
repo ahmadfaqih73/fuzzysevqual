@@ -11,7 +11,7 @@
  Target Server Version : 100420
  File Encoding         : 65001
 
- Date: 09/04/2022 20:57:09
+ Date: 10/04/2022 21:55:31
 */
 
 SET NAMES utf8mb4;
@@ -37,6 +37,90 @@ INSERT INTO `dimensi` VALUES (4, 'Assurance');
 INSERT INTO `dimensi` VALUES (11, 'Empathy');
 
 -- ----------------------------
+-- Table structure for fuzzyfikasi_harapan
+-- ----------------------------
+DROP TABLE IF EXISTS `fuzzyfikasi_harapan`;
+CREATE TABLE `fuzzyfikasi_harapan`  (
+  `id_fuzzyfikasi_harapan` int(11) NOT NULL AUTO_INCREMENT,
+  `dimensi` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `c` double NULL DEFAULT NULL,
+  `a` double NULL DEFAULT NULL,
+  `b` double NULL DEFAULT NULL,
+  PRIMARY KEY (`id_fuzzyfikasi_harapan`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fuzzyfikasi_harapan
+-- ----------------------------
+INSERT INTO `fuzzyfikasi_harapan` VALUES (1, 'Tangibles', 0, 1, 2);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (2, 'Tangibles', 1, 2.5, 4);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (3, 'Tangibles', 1.5, 2.75, 4);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (4, 'Tangibles', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (5, 'Tangibles', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (6, 'Reliability', 1, 2.5, 4);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (7, 'Reliability', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (8, 'Reliability', 1, 2.5, 4);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (9, 'Reliability', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (10, 'Reliability', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (11, 'Responsiveness', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (12, 'Responsiveness', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (13, 'Responsiveness', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (14, 'Responsiveness', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (15, 'Responsiveness', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (16, 'Assurance', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (17, 'Assurance', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (18, 'Assurance', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (19, 'Assurance', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (20, 'Assurance', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (21, 'Empathy', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (22, 'Empathy', 1, 2.5, 4);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (23, 'Empathy', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (24, 'Empathy', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (25, 'Empathy', 2, 3.5, 5);
+
+-- ----------------------------
+-- Table structure for fuzzyfikasi_persepsi
+-- ----------------------------
+DROP TABLE IF EXISTS `fuzzyfikasi_persepsi`;
+CREATE TABLE `fuzzyfikasi_persepsi`  (
+  `id_fuzzyfikasi_persepsi` int(11) NOT NULL AUTO_INCREMENT,
+  `dimensi` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `c` double NULL DEFAULT NULL,
+  `a` double NULL DEFAULT NULL,
+  `b` double NULL DEFAULT NULL,
+  PRIMARY KEY (`id_fuzzyfikasi_persepsi`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of fuzzyfikasi_persepsi
+-- ----------------------------
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (1, 'Tangibles', 1, 2.5, 4);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (2, 'Tangibles', 1, 2.5, 4);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (3, 'Tangibles', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (4, 'Tangibles', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (5, 'Tangibles', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (6, 'Reliability', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (7, 'Reliability', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (8, 'Reliability', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (9, 'Reliability', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (10, 'Reliability', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (11, 'Responsiveness', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (12, 'Responsiveness', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (13, 'Responsiveness', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (14, 'Responsiveness', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (15, 'Responsiveness', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (16, 'Assurance', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (17, 'Assurance', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (18, 'Assurance', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (19, 'Assurance', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (20, 'Assurance', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (21, 'Empathy', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (22, 'Empathy', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (23, 'Empathy', 3, 4.5, 6);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (24, 'Empathy', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (25, 'Empathy', 4, 5.5, 7);
+
+-- ----------------------------
 -- Table structure for kepuasan
 -- ----------------------------
 DROP TABLE IF EXISTS `kepuasan`;
@@ -58,125 +142,6 @@ INSERT INTO `kepuasan` VALUES (4, 'S', 'Setuju', 1);
 INSERT INTO `kepuasan` VALUES (6, 'SS', 'Sangat Setuju', 1);
 
 -- ----------------------------
--- Table structure for kuisioner
--- ----------------------------
-DROP TABLE IF EXISTS `kuisioner`;
-CREATE TABLE `kuisioner`  (
-  `id_kuisioner` int(11) NOT NULL AUTO_INCREMENT,
-  `id_pernyataan` int(11) NULL DEFAULT NULL,
-  `user_id` int(11) NULL DEFAULT NULL,
-  `dimensi_id` int(11) NULL DEFAULT NULL,
-  `created_at` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `Jenis` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `kepuasan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`id_kuisioner`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 101 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
-
--- ----------------------------
--- Records of kuisioner
--- ----------------------------
-INSERT INTO `kuisioner` VALUES (1, 1, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'KTS');
-INSERT INTO `kuisioner` VALUES (2, 2, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (3, 3, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (4, 4, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (5, 5, 1, 1, '2022-04-07 06:59:36', 'Harapan', 'S');
-INSERT INTO `kuisioner` VALUES (6, 6, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (7, 7, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'S');
-INSERT INTO `kuisioner` VALUES (8, 8, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (9, 9, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'KTS');
-INSERT INTO `kuisioner` VALUES (10, 10, 1, 2, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (11, 11, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'S');
-INSERT INTO `kuisioner` VALUES (12, 12, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (13, 13, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'SS');
-INSERT INTO `kuisioner` VALUES (14, 14, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (15, 15, 1, 3, '2022-04-07 06:59:36', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (16, 16, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (17, 17, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'KTS');
-INSERT INTO `kuisioner` VALUES (18, 18, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (19, 19, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (20, 20, 1, 4, '2022-04-07 06:59:36', 'Harapan', 'KTS');
-INSERT INTO `kuisioner` VALUES (21, 21, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (22, 22, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (23, 23, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'S');
-INSERT INTO `kuisioner` VALUES (24, 24, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (25, 25, 1, 11, '2022-04-07 06:59:36', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (26, 2, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'KTS');
-INSERT INTO `kuisioner` VALUES (27, 3, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (28, 4, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (29, 5, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (30, 6, 1, 1, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (31, 7, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (32, 8, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (33, 9, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (34, 10, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (35, 11, 1, 2, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (36, 12, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (37, 13, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (38, 14, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (39, 15, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (40, 16, 1, 3, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (41, 17, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (42, 18, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (43, 19, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (44, 20, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (45, 21, 1, 4, '2022-04-07 07:00:23', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (46, 22, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (47, 23, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (48, 24, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (49, 25, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (50, 26, 1, 11, '2022-04-07 07:00:23', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (51, 1, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'KTS');
-INSERT INTO `kuisioner` VALUES (52, 2, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (53, 3, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (54, 4, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (55, 5, 2, 1, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (56, 6, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (57, 7, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (58, 8, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (59, 9, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (60, 10, 2, 2, '2022-04-07 07:01:19', 'Harapan', 'S');
-INSERT INTO `kuisioner` VALUES (61, 11, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (62, 12, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (63, 13, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (64, 14, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (65, 15, 2, 3, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (66, 16, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (67, 17, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (68, 18, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (69, 19, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (70, 20, 2, 4, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (71, 21, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (72, 22, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (73, 23, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'KS');
-INSERT INTO `kuisioner` VALUES (74, 24, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'S');
-INSERT INTO `kuisioner` VALUES (75, 25, 2, 11, '2022-04-07 07:01:19', 'Harapan', 'CS');
-INSERT INTO `kuisioner` VALUES (76, 2, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'KTS');
-INSERT INTO `kuisioner` VALUES (77, 3, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (78, 4, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (79, 5, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (80, 6, 2, 1, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (81, 7, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (82, 8, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (83, 9, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (84, 10, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (85, 11, 2, 2, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (86, 12, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (87, 13, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (88, 14, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (89, 15, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'SS');
-INSERT INTO `kuisioner` VALUES (90, 16, 2, 3, '2022-04-07 07:02:18', 'Persepsi', 'S');
-INSERT INTO `kuisioner` VALUES (91, 17, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (92, 18, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (93, 19, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (94, 20, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (95, 21, 2, 4, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (96, 22, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (97, 23, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (98, 24, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-INSERT INTO `kuisioner` VALUES (99, 25, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'KS');
-INSERT INTO `kuisioner` VALUES (100, 26, 2, 11, '2022-04-07 07:02:18', 'Persepsi', 'CS');
-
--- ----------------------------
 -- Table structure for kuisioner_harapan
 -- ----------------------------
 DROP TABLE IF EXISTS `kuisioner_harapan`;
@@ -185,65 +150,69 @@ CREATE TABLE `kuisioner_harapan`  (
   `pernyataan_idharapan` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `dimensi_id` int(11) NOT NULL,
-  `kepuasan` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `created_at` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Jenis` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `STS` int(11) NULL DEFAULT NULL,
+  `KS` int(11) NULL DEFAULT NULL,
+  `CS` int(11) NULL DEFAULT NULL,
+  `S` int(11) NULL DEFAULT NULL,
+  `SS` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id_kuisioner_harapan`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 51 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of kuisioner_harapan
 -- ----------------------------
-INSERT INTO `kuisioner_harapan` VALUES (1, 1, 1, 1, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (2, 2, 1, 1, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (3, 3, 1, 1, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (4, 4, 1, 1, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (5, 5, 1, 1, 'S', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (6, 6, 1, 2, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (7, 7, 1, 2, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (8, 8, 1, 2, 'KTS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (9, 9, 1, 2, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (10, 10, 1, 2, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (11, 11, 1, 3, 'S', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (12, 12, 1, 3, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (13, 13, 1, 3, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (14, 14, 1, 3, 'S', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (15, 15, 1, 3, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (16, 16, 1, 4, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (17, 17, 1, 4, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (18, 18, 1, 4, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (19, 19, 1, 4, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (20, 20, 1, 4, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (21, 21, 1, 11, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (22, 22, 1, 11, 'CS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (23, 23, 1, 11, 'SS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (24, 24, 1, 11, 'S', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (25, 25, 1, 11, 'KS', '2022-04-09 15:09:47', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (26, 1, 2, 1, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (27, 2, 2, 1, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (28, 3, 2, 1, 'KTS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (29, 4, 2, 1, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (30, 5, 2, 1, 'KTS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (31, 6, 2, 2, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (32, 7, 2, 2, 'KTS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (33, 8, 2, 2, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (34, 9, 2, 2, 'CS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (35, 10, 2, 2, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (36, 11, 2, 3, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (37, 12, 2, 3, 'KTS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (38, 13, 2, 3, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (39, 14, 2, 3, 'CS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (40, 15, 2, 3, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (41, 16, 2, 4, 'CS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (42, 17, 2, 4, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (43, 18, 2, 4, 'CS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (44, 19, 2, 4, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (45, 20, 2, 4, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (46, 21, 2, 11, 'CS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (47, 22, 2, 11, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (48, 23, 2, 11, 'KS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (49, 24, 2, 11, 'CS', '2022-04-09 15:13:22', 'Harapan');
-INSERT INTO `kuisioner_harapan` VALUES (50, 25, 2, 11, 'KS', '2022-04-09 15:13:22', 'Harapan');
+INSERT INTO `kuisioner_harapan` VALUES (1, 1, 1, 1, '2022-04-10 10:44:29', 'Harapan', 1, 0, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (2, 2, 1, 1, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (3, 3, 1, 1, '2022-04-10 10:44:29', 'Harapan', 1, 0, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (4, 4, 1, 1, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (5, 5, 1, 1, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (6, 6, 1, 2, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (7, 7, 1, 2, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (8, 8, 1, 2, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (9, 9, 1, 2, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (10, 10, 1, 2, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (11, 11, 1, 3, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (12, 12, 1, 3, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (13, 13, 1, 3, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (14, 14, 1, 3, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (15, 15, 1, 3, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (16, 16, 1, 4, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (17, 17, 1, 4, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (18, 18, 1, 4, '2022-04-10 10:44:29', 'Harapan', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_harapan` VALUES (19, 19, 1, 4, '2022-04-10 10:44:29', 'Harapan', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_harapan` VALUES (20, 20, 1, 4, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (21, 21, 1, 11, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (22, 22, 1, 11, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (23, 23, 1, 11, '2022-04-10 10:44:29', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (24, 24, 1, 11, '2022-04-10 10:44:29', 'Harapan', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_harapan` VALUES (25, 25, 1, 11, '2022-04-10 10:44:29', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (26, 1, 2, 1, '2022-04-10 10:45:17', 'Harapan', 1, 0, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (27, 2, 2, 1, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (28, 3, 2, 1, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (29, 4, 2, 1, '2022-04-10 10:45:17', 'Harapan', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_harapan` VALUES (30, 5, 2, 1, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (31, 6, 2, 2, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (32, 7, 2, 2, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (33, 8, 2, 2, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (34, 9, 2, 2, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (35, 10, 2, 2, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (36, 11, 2, 3, '2022-04-10 10:45:17', 'Harapan', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_harapan` VALUES (37, 12, 2, 3, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (38, 13, 2, 3, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (39, 14, 2, 3, '2022-04-10 10:45:17', 'Harapan', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_harapan` VALUES (40, 15, 2, 3, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (41, 16, 2, 4, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (42, 17, 2, 4, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (43, 18, 2, 4, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (44, 19, 2, 4, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (45, 20, 2, 4, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (46, 21, 2, 11, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (47, 22, 2, 11, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (48, 23, 2, 11, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (49, 24, 2, 11, '2022-04-10 10:45:17', 'Harapan', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_harapan` VALUES (50, 25, 2, 11, '2022-04-10 10:45:17', 'Harapan', 0, 0, 1, 0, 0);
 
 -- ----------------------------
 -- Table structure for kuisioner_persepsi
@@ -251,68 +220,72 @@ INSERT INTO `kuisioner_harapan` VALUES (50, 25, 2, 11, 'KS', '2022-04-09 15:13:2
 DROP TABLE IF EXISTS `kuisioner_persepsi`;
 CREATE TABLE `kuisioner_persepsi`  (
   `id_kuisioner_persepsi` int(11) NOT NULL AUTO_INCREMENT,
-  `id_pernyataan_persepsi` int(11) NOT NULL,
+  `pernyataan_persepsi_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `dimensi_id` int(11) NOT NULL,
-  `kepuasan` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `created_at` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Jenis` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `STS` int(10) NULL DEFAULT NULL,
+  `KS` int(10) NULL DEFAULT NULL,
+  `CS` int(10) NULL DEFAULT NULL,
+  `S` int(10) NULL DEFAULT NULL,
+  `SS` int(10) NULL DEFAULT NULL,
   PRIMARY KEY (`id_kuisioner_persepsi`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 51 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of kuisioner_persepsi
 -- ----------------------------
-INSERT INTO `kuisioner_persepsi` VALUES (1, 2, 2, 1, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (2, 3, 2, 1, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (3, 4, 2, 1, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (4, 5, 2, 1, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (5, 6, 2, 1, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (6, 7, 2, 2, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (7, 8, 2, 2, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (8, 9, 2, 2, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (9, 10, 2, 2, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (10, 11, 2, 2, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (11, 12, 2, 3, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (12, 13, 2, 3, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (13, 14, 2, 3, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (14, 15, 2, 3, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (15, 16, 2, 3, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (16, 17, 2, 4, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (17, 18, 2, 4, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (18, 19, 2, 4, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (19, 20, 2, 4, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (20, 21, 2, 4, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (21, 22, 2, 11, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (22, 23, 2, 11, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (23, 24, 2, 11, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (24, 25, 2, 11, 'KS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (25, 26, 2, 11, 'CS', '2022-04-09 15:14:26', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (26, 2, 1, 1, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (27, 3, 1, 1, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (28, 4, 1, 1, 'CS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (29, 5, 1, 1, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (30, 6, 1, 1, 'CS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (31, 7, 1, 2, 'S', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (32, 8, 1, 2, 'S', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (33, 9, 1, 2, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (34, 10, 1, 2, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (35, 11, 1, 2, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (36, 12, 1, 3, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (37, 13, 1, 3, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (38, 14, 1, 3, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (39, 15, 1, 3, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (40, 16, 1, 3, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (41, 17, 1, 4, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (42, 18, 1, 4, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (43, 19, 1, 4, 'CS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (44, 20, 1, 4, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (45, 21, 1, 4, 'CS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (46, 22, 1, 11, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (47, 23, 1, 11, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (48, 24, 1, 11, 'KTS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (49, 25, 1, 11, 'KS', '2022-04-09 15:15:42', 'Persepsi');
-INSERT INTO `kuisioner_persepsi` VALUES (50, 26, 1, 11, 'CS', '2022-04-09 15:15:42', 'Persepsi');
+INSERT INTO `kuisioner_persepsi` VALUES (1, 2, 1, 1, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (2, 3, 1, 1, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (3, 4, 1, 1, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (4, 5, 1, 1, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (5, 6, 1, 1, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (6, 7, 1, 2, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (7, 8, 1, 2, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (8, 9, 1, 2, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (9, 10, 1, 2, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (10, 11, 1, 2, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (11, 12, 1, 3, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (12, 13, 1, 3, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (13, 14, 1, 3, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (14, 15, 1, 3, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (15, 16, 1, 3, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (16, 17, 1, 4, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (17, 18, 1, 4, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (18, 19, 1, 4, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (19, 20, 1, 4, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (20, 21, 1, 4, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (21, 22, 1, 11, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (22, 23, 1, 11, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (23, 24, 1, 11, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (24, 25, 1, 11, '2022-04-10 16:46:55', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (25, 26, 1, 11, '2022-04-10 16:46:55', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (26, 2, 2, 1, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (27, 3, 2, 1, '2022-04-10 16:47:27', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (28, 4, 2, 1, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (29, 5, 2, 1, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (30, 6, 2, 1, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (31, 7, 2, 2, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (32, 8, 2, 2, '2022-04-10 16:47:27', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (33, 9, 2, 2, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (34, 10, 2, 2, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (35, 11, 2, 2, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (36, 12, 2, 3, '2022-04-10 16:47:27', 'Persepsi', 0, 1, 0, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (37, 13, 2, 3, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (38, 14, 2, 3, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (39, 15, 2, 3, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (40, 16, 2, 3, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (41, 17, 2, 4, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (42, 18, 2, 4, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (43, 19, 2, 4, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (44, 20, 2, 4, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (45, 21, 2, 4, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (46, 22, 2, 11, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (47, 23, 2, 11, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (48, 24, 2, 11, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (49, 25, 2, 11, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 1, 0, 0);
+INSERT INTO `kuisioner_persepsi` VALUES (50, 26, 2, 11, '2022-04-10 16:47:27', 'Persepsi', 0, 0, 0, 1, 0);
 
 -- ----------------------------
 -- Table structure for pelanggan

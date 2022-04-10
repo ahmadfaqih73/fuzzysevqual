@@ -9,10 +9,12 @@
                     <tr>
                         <th>No.</th>
                         <th>Dimensi</th>
-                        <th>TFN c</th>
-                        <th>TFN a</th>
-                        <th>TFN b</th>
-
+                        <th>Pernyataan</th>
+                        <th>STS</th>
+                        <th>KS</th>
+                        <th>CS</th>
+                        <th>S</th>
+                        <th>SS</th>
 
                     </tr>
                 </thead>
@@ -20,14 +22,18 @@
 
                     <?php
                     $no = 1;
-                    foreach ($fuzzyfikasi as $value) {
+                    foreach ($Rekapitulasi as $value) {
                     ?>
                         <tr>
                             <td><?php echo $no ?></td>
-                            <td><?php echo $value['dimensi'] ?></td>
-                            <td><?php echo $value['c'] ?></td>
-                            <td><?php echo $value['a'] ?></td>
-                            <td><?php echo $value['b'] ?></td>
+                            <td><?php echo $value['Nama_dimensi'] ?></td>
+                            <td><?php echo $value['Pernyataan_Persepsi'] ?></td>
+                            <td><?php echo $value['jumlahSTS'] ?></td>
+                            <td><?php echo $value['jumlahKS'] ?></td>
+                            <td><?php echo $value['jumlahCS'] ?></td>
+                            <td><?php echo $value['jumlahS'] ?></td>
+                            <td><?php echo $value['jumlahSS'] ?></td>
+
                         </tr>
                     <?php $no++;
                     } ?>

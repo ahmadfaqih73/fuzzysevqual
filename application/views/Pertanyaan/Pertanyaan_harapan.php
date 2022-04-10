@@ -61,8 +61,8 @@
                                                     <td class="project-actions text-center">
 
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio1" value="KTS">
-                                                            <label class="form-check-label" for="inlineRadio1">KTS</label>
+                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio1" value="STS">
+                                                            <label class="form-check-label" for="inlineRadio1">STS</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio2" value="KS">
@@ -73,11 +73,11 @@
                                                             <label class="form-check-label" for="inlineRadio3">CS</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio2" value="S">
+                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadion4" value="S">
                                                             <label class="form-check-label" for="inlineRadio2">S</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio3" value="SS">
+                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadi5" value="SS">
                                                             <label class="form-check-label" for="inlineRadio3">SS</label>
                                                         </div>
                                                     </td>

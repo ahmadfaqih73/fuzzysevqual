@@ -1,8 +1,8 @@
 <?php
-   defined('BASEPATH') or exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-   class Model_PernyataanPersepsi extends CI_Model
-   {
+class Model_PernyataanPersepsi extends CI_Model
+{
     public function get_by_dimensi($id)
     {
         return $this->db->get_where('dimensi', ['id_dimensi' => $id])->row_array();
@@ -12,7 +12,7 @@
         $query = $this->db->get('dimensi');
         return $query->result();
     }
-    
+
     public function read_pernyataanPersepsi()
     {
         $this->db->join('dimensi', 'dimensi.id_dimensi = pernyataan_persepsi.Antribut');
@@ -58,10 +58,30 @@
     public function edit_pernyataan()
     {
     }
-    public function read_pertanyaan(){
+    public function read_pertanyaan()
+    {
 
         //    return $this->db->query("SELECT id_pernyataan_persepsi,Nama_dimensi, Pernyataan_Persepsi FROM pernyataan_persepsi JOIN dimensi ON dimensi.id_dimensi = pernyataan_persepsi.Antribut ORDER BY id_dimensi ASC;")->result_array();
         $this->db->join('dimensi', 'dimensi.id_dimensi = pernyataan_persepsi.Antribut');
         return $this->db->get('pernyataan_persepsi')->result();
     }
-   }
+    public function Rekapitulasi_persepsi()
+    {
+        return
+            $this->db->query("SELECT
+            Pernyataan_Persepsi,
+             Nama_dimensi,
+            SUM( STS ) AS jumlahSTS,
+            SUM( KS ) AS jumlahKS,
+            SUM( CS ) AS jumlahCS,
+            SUM( S ) AS jumlahS,
+            SUM( SS ) AS jumlahSS 
+        FROM
+            kuisioner_persepsi 
+            JOIN dimensi ON dimensi.id_dimensi = kuisioner_persepsi.dimensi_id
+						JOIN pernyataan_persepsi ON pernyataan_persepsi.id_pernyataan_persepsi = kuisioner_persepsi.pernyataan_persepsi_id
+        GROUP BY
+           id_pernyataan_persepsi
+	")->result_array();
+    }
+}

@@ -133,5 +133,6 @@ $autoload['language'] = array();
 |	$autoload['model'] = array('first_model' => 'first');
 */
 $autoload['model'] = array(
-    'Model_user', 'full_user','Model_dimensi', 'Model_kepuasan','Model_PernyataanHarapan', 'Model_PernyataanPersepsi'
+    'Model_user', 'full_user','Model_dimensi', 'Model_kepuasan','Model_PernyataanHarapan', 'Model_PernyataanPersepsi',
+    'Model_fuzzy'
 );

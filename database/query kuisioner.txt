@@ -68,3 +68,34 @@ GROUP BY
 		id_dimensi 
 	HAVING 
     COUNT(kepuasan);
+
+===============================
+
+SELECT
+	pernyataan_idharapan,
+	SUM( STS ) AS jumlahSTS,
+	SUM( KS ) AS jumlahKS,
+	SUM( CS ) AS jumlahCS,
+	SUM( S ) AS jumlahS,
+	SUM( SS ) AS jumlahSS 
+FROM
+	kuisioner_harapan 
+GROUP BY
+	pernyataan_idharapan
+	
+===================================
+SELECT
+            Pernyataan_Persepsi,
+             Nama_dimensi,
+            SUM( STS ) AS jumlahSTS,
+            SUM( KS ) AS jumlahKS,
+            SUM( CS ) AS jumlahCS,
+            SUM( S ) AS jumlahS,
+            SUM( SS ) AS jumlahSS 
+        FROM
+            kuisioner_persepsi 
+            JOIN dimensi ON dimensi.id_dimensi = kuisioner_persepsi.dimensi_id
+						JOIN pernyataan_persepsi ON pernyataan_persepsi.id_pernyataan_persepsi = kuisioner_persepsi.pernyataan_persepsi_id
+        GROUP BY
+           id_pernyataan_persepsi
+	
