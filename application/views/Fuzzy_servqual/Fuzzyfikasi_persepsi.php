@@ -12,7 +12,7 @@
                         <th>TFN c</th>
                         <th>TFN a</th>
                         <th>TFN b</th>
-
+                        <th>Defuzy</th>
 
                     </tr>
                 </thead>
@@ -28,6 +28,7 @@
                             <td><?php echo $value['c'] ?></td>
                             <td><?php echo $value['a'] ?></td>
                             <td><?php echo $value['b'] ?></td>
+                            <td><?php echo $value['defuz'] ?></td>
                         </tr>
                     <?php $no++;
                     } ?>
