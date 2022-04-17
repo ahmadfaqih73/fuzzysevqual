@@ -11,7 +11,7 @@
  Target Server Version : 100420
  File Encoding         : 65001
 
- Date: 10/04/2022 21:55:31
+ Date: 17/04/2022 13:23:36
 */
 
 SET NAMES utf8mb4;
@@ -46,37 +46,38 @@ CREATE TABLE `fuzzyfikasi_harapan`  (
   `c` double NULL DEFAULT NULL,
   `a` double NULL DEFAULT NULL,
   `b` double NULL DEFAULT NULL,
+  `defuz_harapan` double NULL DEFAULT NULL,
   PRIMARY KEY (`id_fuzzyfikasi_harapan`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fuzzyfikasi_harapan
 -- ----------------------------
-INSERT INTO `fuzzyfikasi_harapan` VALUES (1, 'Tangibles', 0, 1, 2);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (2, 'Tangibles', 1, 2.5, 4);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (3, 'Tangibles', 1.5, 2.75, 4);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (4, 'Tangibles', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (5, 'Tangibles', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (6, 'Reliability', 1, 2.5, 4);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (7, 'Reliability', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (8, 'Reliability', 1, 2.5, 4);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (9, 'Reliability', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (10, 'Reliability', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (11, 'Responsiveness', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (12, 'Responsiveness', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (13, 'Responsiveness', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (14, 'Responsiveness', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (15, 'Responsiveness', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (16, 'Assurance', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (17, 'Assurance', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (18, 'Assurance', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (19, 'Assurance', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (20, 'Assurance', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (21, 'Empathy', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (22, 'Empathy', 1, 2.5, 4);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (23, 'Empathy', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (24, 'Empathy', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_harapan` VALUES (25, 'Empathy', 2, 3.5, 5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (1, 'Tangibles', 0, 1, 2, 1.5);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (2, 'Tangibles', 1, 2.5, 4, 3.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (3, 'Tangibles', 1.5, 2.75, 4, 3.375);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (4, 'Tangibles', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (5, 'Tangibles', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (6, 'Reliability', 1, 2.5, 4, 3.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (7, 'Reliability', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (8, 'Reliability', 1, 2.5, 4, 3.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (9, 'Reliability', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (10, 'Reliability', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (11, 'Responsiveness', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (12, 'Responsiveness', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (13, 'Responsiveness', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (14, 'Responsiveness', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (15, 'Responsiveness', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (16, 'Assurance', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (17, 'Assurance', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (18, 'Assurance', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (19, 'Assurance', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (20, 'Assurance', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (21, 'Empathy', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (22, 'Empathy', 1, 2.5, 4, 3.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (23, 'Empathy', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (24, 'Empathy', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_harapan` VALUES (25, 'Empathy', 2, 3.5, 5, 4.25);
 
 -- ----------------------------
 -- Table structure for fuzzyfikasi_persepsi
@@ -88,37 +89,58 @@ CREATE TABLE `fuzzyfikasi_persepsi`  (
   `c` double NULL DEFAULT NULL,
   `a` double NULL DEFAULT NULL,
   `b` double NULL DEFAULT NULL,
+  `defuz_persepsi` double NULL DEFAULT NULL,
   PRIMARY KEY (`id_fuzzyfikasi_persepsi`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 26 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fuzzyfikasi_persepsi
 -- ----------------------------
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (1, 'Tangibles', 1, 2.5, 4);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (2, 'Tangibles', 1, 2.5, 4);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (3, 'Tangibles', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (4, 'Tangibles', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (5, 'Tangibles', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (6, 'Reliability', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (7, 'Reliability', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (8, 'Reliability', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (9, 'Reliability', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (10, 'Reliability', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (11, 'Responsiveness', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (12, 'Responsiveness', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (13, 'Responsiveness', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (14, 'Responsiveness', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (15, 'Responsiveness', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (16, 'Assurance', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (17, 'Assurance', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (18, 'Assurance', 4, 5.5, 7);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (19, 'Assurance', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (20, 'Assurance', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (21, 'Empathy', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (22, 'Empathy', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (23, 'Empathy', 3, 4.5, 6);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (24, 'Empathy', 2, 3.5, 5);
-INSERT INTO `fuzzyfikasi_persepsi` VALUES (25, 'Empathy', 4, 5.5, 7);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (1, 'Tangibles', 1, 2.5, 4, 3.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (2, 'Tangibles', 1, 2.5, 4, 3.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (3, 'Tangibles', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (4, 'Tangibles', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (5, 'Tangibles', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (6, 'Reliability', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (7, 'Reliability', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (8, 'Reliability', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (9, 'Reliability', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (10, 'Reliability', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (11, 'Responsiveness', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (12, 'Responsiveness', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (13, 'Responsiveness', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (14, 'Responsiveness', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (15, 'Responsiveness', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (16, 'Assurance', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (17, 'Assurance', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (18, 'Assurance', 4, 5.5, 7, 6.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (19, 'Assurance', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (20, 'Assurance', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (21, 'Empathy', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (22, 'Empathy', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (23, 'Empathy', 3, 4.5, 6, 5.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (24, 'Empathy', 2, 3.5, 5, 4.25);
+INSERT INTO `fuzzyfikasi_persepsi` VALUES (25, 'Empathy', 4, 5.5, 7, 6.25);
+
+-- ----------------------------
+-- Table structure for hasil
+-- ----------------------------
+DROP TABLE IF EXISTS `hasil`;
+CREATE TABLE `hasil`  (
+  `id_GAP` int(11) NOT NULL AUTO_INCREMENT,
+  `dimensi` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `GAP` double NULL DEFAULT NULL,
+  PRIMARY KEY (`id_GAP`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of hasil
+-- ----------------------------
+INSERT INTO `hasil` VALUES (1, 'Assurance', 0.8);
+INSERT INTO `hasil` VALUES (2, 'Empathy', 0.6);
+INSERT INTO `hasil` VALUES (3, 'Reliability', 0.8);
+INSERT INTO `hasil` VALUES (4, 'Responsiveness', 0.2);
+INSERT INTO `hasil` VALUES (5, 'Tangibles', 0.925);
 
 -- ----------------------------
 -- Table structure for kepuasan
@@ -293,9 +315,18 @@ INSERT INTO `kuisioner_persepsi` VALUES (50, 26, 2, 11, '2022-04-10 16:47:27', '
 DROP TABLE IF EXISTS `pelanggan`;
 CREATE TABLE `pelanggan`  (
   `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT,
-  `Nama_Pelanggan` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `namapelanggan` varchar(90) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `jenis_kelamin` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `alamat` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `nohp` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id_pelanggan`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of pelanggan
+-- ----------------------------
+INSERT INTO `pelanggan` VALUES (2, 'Faqih', '1', 'Maron', '087760115049');
+INSERT INTO `pelanggan` VALUES (3, 'dani', '1', 'Genteng', '058776424124');
 
 -- ----------------------------
 -- Table structure for pernyataan_harapan
