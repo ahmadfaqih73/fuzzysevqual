@@ -111,7 +111,7 @@
             // GROUP BY dimensi")->result_array();
             foreach ($data as $key => $value) {
                 $dimensi = $value['Dimensi'];
-                $servqual = ( $value['TotalAVGpersepsi']- $value['TotalAVGharapan']);
+                $servqual = ($value['TotalAVGpersepsi'] - $value['TotalAVGharapan']);
                 $hasil = array(
                     'dimensi' => $dimensi,
                     'GAP' => $servqual
@@ -121,18 +121,25 @@
                 // echo "<prev";
                 $this->db->insert('hasil', $hasil);
             }
+            redirect('Hasil');
         }
-        public function hasil_akhir(){
-            return $this->db->get('hasil')->result_arra();
+        public function hasil_akhir()
+        {
+            return $this->db->get('hasil')->result_array();
         }
         public function hapus_fuzzy_harapan()
         {
             $this->db->truncate('fuzzyfikasi_harapan');
-        redirect('Fuzzyfikasi_harapan');
+            redirect('Fuzzyfikasi_harapan');
         }
         public function hapus_fuzzy_persepsi()
         {
             $this->db->truncate('fuzzyfikasi_persepsi');
             redirect('Fuzzyfikasi_persepsi');
+        }
+        public function hapus_hasil()
+        {
+            $this->db->truncate('hasil');
+            redirect('Hasil');
         }
     }

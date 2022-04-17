@@ -11,7 +11,7 @@
  Target Server Version : 100420
  File Encoding         : 65001
 
- Date: 17/04/2022 20:20:36
+ Date: 17/04/2022 21:44:29
 */
 
 SET NAMES utf8mb4;
@@ -136,11 +136,11 @@ CREATE TABLE `hasil`  (
 -- ----------------------------
 -- Records of hasil
 -- ----------------------------
-INSERT INTO `hasil` VALUES (1, 'Assurance', 0.8);
-INSERT INTO `hasil` VALUES (2, 'Empathy', 0.6);
-INSERT INTO `hasil` VALUES (3, 'Reliability', 0.8);
-INSERT INTO `hasil` VALUES (4, 'Responsiveness', 0.2);
-INSERT INTO `hasil` VALUES (5, 'Tangibles', 0.925);
+INSERT INTO `hasil` VALUES (1, 'Assurance', 0.80000000000002);
+INSERT INTO `hasil` VALUES (2, 'Empathy', 0.26666666666666);
+INSERT INTO `hasil` VALUES (3, 'Reliability', 1.05);
+INSERT INTO `hasil` VALUES (4, 'Responsiveness', 0.000000000000020428103653103);
+INSERT INTO `hasil` VALUES (5, 'Tangibles', 1.45);
 
 -- ----------------------------
 -- Table structure for kepuasan

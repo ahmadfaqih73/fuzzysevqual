@@ -21,5 +21,8 @@ class Fuzzy extends CI_Controller
     {
         $this->Model_fuzzy->hapus_fuzzy_persepsi();
     }
+    public function truncate_hasil(){
+        $this->Model_fuzzy->hapus_hasil();
+    }
     
 }

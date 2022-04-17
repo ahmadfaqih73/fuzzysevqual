@@ -68,12 +68,12 @@ class Kuisioner_Persepsi extends CI_Controller
         {
                 header('Content-type: application/json');
                 $nama = $this->input->post('nama');
-                $this->db->like('fullname', $nama);
-                $hasil = $this->db->get('users')->result();
+                $this->db->like('namapelanggan', $nama);
+                $hasil = $this->db->get('pelanggan')->result();
                 foreach ($hasil as $datauser) {
                         $data[] = array(
-                                'id'    => $datauser->id_user,
-                                'text'  => $datauser->fullname
+                                'id'    => $datauser->id_pelanggan,
+                                'text'  => $datauser->namapelanggan
                         );
                 }
 

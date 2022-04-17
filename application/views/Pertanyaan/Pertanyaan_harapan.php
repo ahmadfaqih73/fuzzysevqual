@@ -14,7 +14,7 @@
                             <form class="Kuisioner" method="POST" action="<?php echo base_url('Kuisioner_Harapan/addQuisioner') ?>">
                                 <div class="card-header">
                                     <div class="form-group">
-                                        <label>Nama user</label>
+                                        <label>Nama Pelanggan</label>
                                         <select class="form-control" id="selectUser" autofocus="true" name="nama">
                                         </select>
                                     </div>
@@ -111,13 +111,13 @@
 <script type="text/javascript">
     $('#selectUser').select2({
         theme: 'bootstrap4',
-        placeholder: 'Pilih User',
+        placeholder: 'Pilih Pelanggan',
         ajax: {
-            url: '<?php echo base_url('Kuisioner_Persepsi/getNamaUser') ?>',
+            url: '<?php echo base_url('Kuisioner_Harapan/getNamaUser') ?>',
             type: 'POST',
             dataType: 'json',
             data: params => ({
-                fullname: params.term
+                namapelanggan: params.term
             }),
             processResults: data => ({
                 results: data

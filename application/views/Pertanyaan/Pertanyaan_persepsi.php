@@ -15,7 +15,7 @@
                                 <div class="card-header">
 
                                     <div class="form-group">
-                                        <label>Nama user</label>
+                                        <label>Nama Pelanggan</label>
                                         <select class="form-control" id="selectUser" autofocus="true" name="nama">
                                         </select>
                                     </div>
@@ -62,8 +62,8 @@
                                                     <td class="project-actions text-center">
 
                                                         <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio1" value="KTS">
-                                                            <label class="form-check-label" for="inlineRadio1">KTS</label>
+                                                            <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio1" value="STS">
+                                                            <label class="form-check-label" for="inlineRadio1">STS</label>
                                                         </div>
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input" type="radio" name="Kepuasan<?= $no ?>" id="inlineRadio2" value="KS">
@@ -118,7 +118,7 @@
             type: 'POST',
             dataType: 'json',
             data: params => ({
-                fullname: params.term
+                namapelanggan: params.term
             }),
             processResults: data => ({
                 results: data

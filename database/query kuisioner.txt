@@ -98,4 +98,12 @@ SELECT
 						JOIN pernyataan_persepsi ON pernyataan_persepsi.id_pernyataan_persepsi = kuisioner_persepsi.pernyataan_persepsi_id
         GROUP BY
            id_pernyataan_persepsi
+================================================
+SELECT fuzzyfikasi_harapan.dimensi,
+AVG(fuzzyfikasi_harapan.defuz_harapan) AS TotalAVGharapan ,
+AVG(fuzzyfikasi_persepsi.defuz_persepsi)  AS TotalAVGpersepsi 
+FROM fuzzyfikasi_harapan INNER JOIN fuzzyfikasi_persepsi ON 
+fuzzyfikasi_harapan.id_fuzzyfikasi_harapan= fuzzyfikasi_persepsi.id_fuzzyfikasi_persepsi
+ GROUP BY dimensi;
+=================================================
 	
