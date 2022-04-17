@@ -14,5 +14,12 @@ class Fuzzy extends CI_Controller
     public function GAP(){
         $this->Model_fuzzy->Servqual();
     }
+    public function truncate_fuzzyfikasi_harapan(){
+        $this->Model_fuzzy->hapus_fuzzy_harapan();
+    }
+    public function truncate_fuzzyfikasi_persepsi()
+    {
+        $this->Model_fuzzy->hapus_fuzzy_persepsi();
+    }
     
 }

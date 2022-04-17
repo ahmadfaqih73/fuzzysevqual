@@ -4,14 +4,20 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="col-md-6">
-                <a class="btn btn-danger btn-sm" href="">
+                <a class="btn btn-danger btn-sm" href="<?php echo base_url('Fuzzy/truncate_fuzzyfikasi_harapan') ?>">
                     <i class="fas fa-trash">
                     </i>
                     Delete
                 </a>
+                <a class="btn btn-success btn-sm" href="<?php echo base_url('Fuzzy/hasilfuzzyfikasi_harapan') ?>">
+                    <i class="fas fa-pencil-alt">
+                    </i>
+                    proses
+                </a>
             </div>
+            <br>
 
-            <table class="table table-bordered text-center table-hover table-striped" id="tableKuisioner">
+            <table class=" table table-bordered text-center table-hover table-striped" id="tableKuisioner">
                 <thead>
                     <tr>
                         <th>No.</th>

@@ -33,7 +33,7 @@
                     'c' => $batasbawah,
                     'a' => $batastengah,
                     'b' => $batasatas,
-                    'defuz' => $defuz_harapan
+                    'defuz_harapan' => $defuz_harapan
                 );
                 //  echo"<pre>";
                 //  print_r($hasil);
@@ -79,7 +79,7 @@
                     'c' => $batasbawah,
                     'a' => $batastengah,
                     'b' => $batasatas,
-                    'defuz' => $defuz_persepsi
+                    'defuz_persepsi' => $defuz_persepsi
                 );
                 //  echo"<pre>";
                 //  print_r($hasil);
@@ -90,7 +90,7 @@
 
                 $this->db->insert('fuzzyfikasi_persepsi', $hasil);
             }
-            // redirect('Fuzzyfikasi_persepsi');
+            redirect('Fuzzyfikasi_persepsi');
         }
         public function hasil_fuzzyfikasi_persepsi()
         {
@@ -128,5 +128,11 @@
         public function hapus_fuzzy_harapan()
         {
             $this->db->truncate('fuzzyfikasi_harapan');
+        redirect('Fuzzyfikasi_harapan');
+        }
+        public function hapus_fuzzy_persepsi()
+        {
+            $this->db->truncate('fuzzyfikasi_persepsi');
+            redirect('Fuzzyfikasi_persepsi');
         }
     }

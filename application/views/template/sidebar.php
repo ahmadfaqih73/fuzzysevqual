@@ -1,3 +1,7 @@
+<?php  
+$role = $this->session->userdata('role'); 
+?>
+
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -28,7 +32,11 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               <?php 
+               if ( $role == 1 ) {
+                ?>
                 <li class="nav-item menu-close">
+
                     <a href="<?= base_url('View_user/index'); ?>" class="nav-link ">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
@@ -36,6 +44,10 @@
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                <?php } ?>
+                     <?php 
+                     if ( $role == 1 || $role == 0 || $role == 2 ) {
+                ?>
                     <a href="<?= base_url('Pelanggan/index'); ?>" class="nav-link ">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
@@ -43,6 +55,11 @@
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                     <?php } ?>
+
+                <?php 
+               if ( $role == 1 ) {
+                ?>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-database"></i>
@@ -92,6 +109,9 @@
                         </li>
                     </ul>
                 </li>
+            <?php } ?>
+            <?php 
+            if ( $role == 1 || $role == 2 || $role == 0 ) { ?>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa-solid fa-messages-question"></i>
@@ -117,7 +137,10 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+            <?php } ?>
+            <?php if ($role == 1 ) { ?>
+                <l
+                i class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa-solid fa-messages-question"></i>
                         <p>
@@ -166,6 +189,7 @@
                         </li>
                     </ul>
                 </li>
+            <?php } ?>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

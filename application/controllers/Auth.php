@@ -49,14 +49,34 @@ class Auth extends CI_Controller
     }
     public function login_action()
     {
+        
+
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $check_login_r = $this->Model_user->getLogin($username, $password)->num_rows();
-        if ($check_login_r > 0) {
+        $check_login_r = $this->Model_user->getLogin($username, $password);;
+        if ($check_login_r->num_rows() > 0) {
+
+            $setData = array(
+                'namaUser' => $check_login_r->result()[0]->fullname,
+                'role' => $check_login_r->result()[0]->Role_user
+            );
+
+            // Session user
+            $set_session = $this->session->set_userdata($setData);
+
             redirect("Admin");
             # code...
         } else {
             echo "login gagal";
         }
+    }
+
+    public function logout()
+    {
+
+        $array_items = array('namaUser', 'role');
+
+        $this->session->unset_userdata($array_items);
+        redirect('Auth','refresh');
     }
 }
