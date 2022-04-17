@@ -98,30 +98,35 @@
         }
         public function Servqual()
         {
-            $data = $this->db->query("SELECT dimensi ,
-            SUM(defuz_persepsi) AS total_sum1, 
-            AVG(defuz_persepsi)  AS hasil
-            FROM fuzzyfikasi_persepsi 
-            GROUP BY dimensi")->result_array();
+            $data = $this->db->query("SELECT fuzzyfikasi_harapan.dimensi AS Dimensi,
+            AVG(fuzzyfikasi_harapan.defuz_harapan) AS TotalAVGharapan ,
+            AVG(fuzzyfikasi_persepsi.defuz_persepsi)  AS TotalAVGpersepsi 
+            FROM fuzzyfikasi_harapan INNER JOIN fuzzyfikasi_persepsi 
+            ON fuzzyfikasi_harapan.id_fuzzyfikasi_harapan= fuzzyfikasi_persepsi.id_fuzzyfikasi_persepsi 
+            GROUP BY dimensi;")->result_array();
             // $data = $this->db->query("SELECT dimensi 
             // ,SUM(defuz_harapan) as total_sum, 
             // AVG(defuz_harapan)  as total
             // FROM fuzzyfikasi_harapan 
             // GROUP BY dimensi")->result_array();
             foreach ($data as $key => $value) {
-                $dimensi = $value['dimensi'];
-                $servqual = ( $value['total_sum1']);
+                $dimensi = $value['Dimensi'];
+                $servqual = ( $value['TotalAVGpersepsi']- $value['TotalAVGharapan']);
                 $hasil = array(
                     'dimensi' => $dimensi,
-                    'Mean' => $servqual
+                    'GAP' => $servqual
                 );
-                echo "<pre>";
-                print_r($hasil);
-                echo "<prev";
+                // echo "<pre>";
+                // print_r($hasil);
+                // echo "<prev";
+                $this->db->insert('hasil', $hasil);
             }
+        }
+        public function hasil_akhir(){
+            return $this->db->get('hasil')->result_arra();
         }
         public function hapus_fuzzy_harapan()
         {
-            // $this->db->query"TRUNCATE ;
+            $this->db->truncate('fuzzyfikasi_harapan');
         }
     }

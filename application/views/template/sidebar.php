@@ -36,6 +36,13 @@
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <a href="<?= base_url('Pelanggan/index'); ?>" class="nav-link ">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Pelanggan
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-database"></i>

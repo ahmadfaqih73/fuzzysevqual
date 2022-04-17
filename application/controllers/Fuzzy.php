@@ -14,4 +14,5 @@ class Fuzzy extends CI_Controller
     public function GAP(){
         $this->Model_fuzzy->Servqual();
     }
+    
 }

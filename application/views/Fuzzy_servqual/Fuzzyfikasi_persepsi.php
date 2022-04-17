@@ -28,7 +28,7 @@
                             <td><?php echo $value['c'] ?></td>
                             <td><?php echo $value['a'] ?></td>
                             <td><?php echo $value['b'] ?></td>
-                            <td><?php echo $value['defuz'] ?></td>
+                            <td><?php echo $value['defuz_persepsi'] ?></td>
                         </tr>
                     <?php $no++;
                     } ?>

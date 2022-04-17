@@ -23,7 +23,7 @@
                         <tr>
                             <td><?php echo $no ?></td>
                             <td><?php echo $value['dimensi'] ?></td>
-                            <td><?php echo $value['total'] ?></td>
+                            <td><?php echo $value['GAP'] ?></td>
                             
                         </tr>
                     <?php $no++;
