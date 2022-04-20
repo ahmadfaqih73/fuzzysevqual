@@ -5,13 +5,13 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Edit Pernyataan Harapan</h1>
+                    <h1 class="m-0">Edit Pernyataan Persepsi</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-            <?php echo form_open_multipart('PernyataanHarapan/edit') ?>
+            <?php echo form_open_multipart('PernyataanPersepsi/edit') ?>
             <form class="tambah_dimensi" method="POST">
-                <input type="hidden" name="id" value="<?= $pernyataanharapan['id_pernyataan_harapan'];   ?>" required>
+                <input type="hidden" name="id" value="<?= $pernyataanpersepsi['id_pernyataan_persepsi'];   ?>" required>
                 <div class="form-group">
                     <label>Dimensi</label>
                     <select class="form-control" name="dimensi" id="dimensi" required=''>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label>Pertanyaan</label>
-                    <input type="text" class="form-control" name="pertanyaan" required="" value="<?php echo $pernyataanharapan['Pernyataan_harapan']; ?>">
+                    <input type="text" class="form-control" name="pertanyaan" required="" value="<?php echo $pernyataanpersepsi['Pernyataan_Persepsi']; ?>">
                 </div>
                 <button type="button" class="btn btn-warning float-left" onclick="window.history.back(-1)">Kembali</button>
                 <button type="submit" class="btn btn-success float-right">Edit data</button>

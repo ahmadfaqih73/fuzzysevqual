@@ -24,5 +24,12 @@ class Fuzzy extends CI_Controller
     public function truncate_hasil(){
         $this->Model_fuzzy->hapus_hasil();
     }
+    public function truncate_rekapitulasi_harapan(){
+        $this->Model_fuzzy->hapus_kuisoner_harapan();
+    }
+    public function truncate_rekapitulasi_persepsi()
+    {
+        $this->Model_fuzzy->hapus_kuisoner_persepsi();
+    }
     
 }

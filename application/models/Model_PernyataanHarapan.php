@@ -59,9 +59,31 @@
             $this->db->join('dimensi', 'dimensi.id_dimensi = pernyataan_harapan.Antribut');
             return $this->db->get('pernyataan_harapan')->result();
         }
-        public function Rekapitulasi_harapan(){
+        public function getPernyataanHarapan($id)
+        {
+            return $this->db->get_where('pernyataan_harapan', ['id_pernyataan_harapan' => $id])->row_array();
+        }
+        public function update_PernyataanHarapan()
+        {
+            $dimensi = $this->input->post('dimensi');
+            $pertanyaan = $this->input->post('pertanyaan');
+       
+            $data = array(
+                'Antribut' => $dimensi,
+                'Pernyataan_harapan' => $pertanyaan
+                
+            );
+            //   echo "<pre>";
+            // print_r($data);
+            // echo "<prev";
+            $this->db->where('id_pernyataan_harapan', $this->input->post('id'));
+            $this->db->update('pernyataan_harapan', $data);
+            redirect('PernyataanHarapan');
+        }
+        public function Rekapitulasi_harapan()
+        {
             return
-            $this->db->query("SELECT
+                $this->db->query("SELECT
             Pernyataan_harapan,
              Nama_dimensi,
             SUM( STS ) AS jumlahSTS,
@@ -77,24 +99,5 @@
             pernyataan_idharapan
 	")->result_array();
         }
-        public function fuzzyfikasi_harapan(){
-//             return $this->db->query("SELECT
 
-// Pernyataan_harapan,
-// Jenis, 
-//      Nama_dimensi,
-//     kepuasan,      COUNT(kepuasan)
-// FROM
-// kuisioner_harapan
-// 	 JOIN dimensi ON dimensi.id_dimensi = kuisioner_harapan.dimensi_id
-//  JOIN pernyataan_harapan ON pernyataan_harapan.id_pernyataan_harapan = kuisioner_harapan.pernyataan_idharapan
-// 	 WHERE Jenis= 'Harapan'
-// GROUP BY
-//   pernyataan_idharapan,
-//     Jenis , 
-//     kepuasan,
-// 		id_dimensi 
-// 	HAVING 
-//     COUNT(kepuasan);")->result_array();
-        }
    }

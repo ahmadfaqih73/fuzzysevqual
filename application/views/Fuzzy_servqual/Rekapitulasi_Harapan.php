@@ -2,8 +2,13 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-        <div class="container-fluid">
-
+        <br class="container-fluid">
+            <a class="btn btn-danger btn-sm" href="<?php echo base_url('Fuzzy/truncate_rekapitulasi_harapan') ?>">
+                <i class="fas fa-trash">
+                </i>
+                Delete
+            </a>
+            <br></br>
             <table class="table table-bordered text-center table-hover table-striped" id="tableKuisioner">
                 <thead>
                     <tr>
@@ -15,7 +20,7 @@
                         <th>CS</th>
                         <th>S</th>
                         <th>SS</th>
-                    
+
                     </tr>
                 </thead>
                 <tbody>

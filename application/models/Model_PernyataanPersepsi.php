@@ -65,6 +65,27 @@ class Model_PernyataanPersepsi extends CI_Model
         $this->db->join('dimensi', 'dimensi.id_dimensi = pernyataan_persepsi.Antribut');
         return $this->db->get('pernyataan_persepsi')->result();
     }
+    public function getPernyataanPersepsi($id)
+    {
+        return $this->db->get_where('pernyataan_persepsi', ['id_pernyataan_persepsi' => $id])->row_array();
+    }
+    public function update_PernyataanPersepsi()
+    {
+        $dimensi = $this->input->post('dimensi');
+        $pertanyaan = $this->input->post('pertanyaan');
+
+        $data = array(
+            'Antribut' => $dimensi,
+            'Pernyataan_persepsi' => $pertanyaan
+
+        );
+        //   echo "<pre>";
+        // print_r($data);
+        // echo "<prev";
+        $this->db->where('id_pernyataan_persepsi', $this->input->post('id'));
+        $this->db->update('pernyataan_persepsi', $data);
+        redirect('PernyataanPersepsi');
+    }
     public function Rekapitulasi_persepsi()
     {
         return
