@@ -24,10 +24,10 @@
 	")->result_array();
             foreach ($data as $key => $value) {
                 $dimensi = $value['Nama_dimensi'];
-                $batasbawah =round ((($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),2);
-                $batastengah = round((($value['jumlahSTS'] * 1) + ($value['jumlahKS'] * 2.5) + ($value['jumlahCS'] * 4.5) + ($value['jumlahS'] * 6.5) + ($value['jumlahSS'] * 8.5)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),2);
-                $batasatas = round((($value['jumlahSTS'] * 2) + ($value['jumlahKS'] * 4) + ($value['jumlahCS'] * 6) + ($value['jumlahS'] * 8) + ($value['jumlahSS'] * 10)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),2);
-                $defuz_harapan = round((($batastengah + $batasatas) / 2),2);
+                $batasbawah =round ((($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),1);
+                $batastengah = round((($value['jumlahSTS'] * 1) + ($value['jumlahKS'] * 2.5) + ($value['jumlahCS'] * 4.5) + ($value['jumlahS'] * 6.5) + ($value['jumlahSS'] * 8.5)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),1);
+                $batasatas = round((($value['jumlahSTS'] * 2) + ($value['jumlahKS'] * 4) + ($value['jumlahCS'] * 6) + ($value['jumlahS'] * 8) + ($value['jumlahSS'] * 10)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),1);
+                $defuz_harapan = round((($batastengah + $batasatas) / 2),1);
                 $hasil = array(
                     'dimensi' => $dimensi,
                     'c' => $batasbawah,
@@ -70,10 +70,10 @@
 	")->result_array();
             foreach ($data as $key => $value) {
                 $dimensi = $value['Nama_dimensi'];
-                $batasbawah = round((($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),2);
-                $batastengah = round((($value['jumlahSTS'] * 1) + ($value['jumlahKS'] * 2.5) + ($value['jumlahCS'] * 4.5) + ($value['jumlahS'] * 6.5) + ($value['jumlahSS'] * 8.5)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),2);
-                $batasatas = round((($value['jumlahSTS'] * 2) + ($value['jumlahKS'] * 4) + ($value['jumlahCS'] * 6) + ($value['jumlahS'] * 8) + ($value['jumlahSS'] * 10)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),2);
-                $defuz_persepsi = round((($batastengah + $batasatas) / 2),2);
+                $batasbawah = round((($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),1);
+                $batastengah = round((($value['jumlahSTS'] * 1) + ($value['jumlahKS'] * 2.5) + ($value['jumlahCS'] * 4.5) + ($value['jumlahS'] * 6.5) + ($value['jumlahSS'] * 8.5)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),1);
+                $batasatas = round((($value['jumlahSTS'] * 2) + ($value['jumlahKS'] * 4) + ($value['jumlahCS'] * 6) + ($value['jumlahS'] * 8) + ($value['jumlahSS'] * 10)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']),1);
+                $defuz_persepsi = round((($batastengah + $batasatas) / 2),1);
                 $hasil = array(
                     'dimensi' => $dimensi,
                     'c' => $batasbawah,
