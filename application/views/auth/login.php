@@ -2,7 +2,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="../../index2.html" class="h1"><b>Uniba</b></a>
+      <a href="../../index2.html" class="h1"><b>Login</b></a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Masukkan User dan Password</p>
