@@ -24,14 +24,14 @@
 	")->result_array();
             foreach ($data as $key => $value) {
                 $dimensi = $value['Nama_dimensi'];
-                $batasbawah =(($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
+                $batasbawah = (($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
                 $batastengah = (($value['jumlahSTS'] * 1) + ($value['jumlahKS'] * 2.5) + ($value['jumlahCS'] * 4.5) + ($value['jumlahS'] * 6.5) + ($value['jumlahSS'] * 8.5)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
                 $batasatas = (($value['jumlahSTS'] * 2) + ($value['jumlahKS'] * 4) + ($value['jumlahCS'] * 6) + ($value['jumlahS'] * 8) + ($value['jumlahSS'] * 10)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
                 $defuz_harapan = (($batastengah + $batasatas) / 2);
-                $hasil_batasbawah=round(($batasbawah),1);
-                $hasil_batastengah = round(($batastengah), 1);
-                $hasil_batasatas = round(($batasatas), 1);
-                $hasil_defuz = round(($defuz_harapan), 1);
+                $hasil_batasbawah = round(($batasbawah), 2);
+                $hasil_batastengah = round(($batastengah), 2);
+                $hasil_batasatas = round(($batasatas), 2);
+                $hasil_defuz = round(($defuz_harapan), 2);
                 $hasil = array(
                     'dimensi' => $dimensi,
                     'c' => $hasil_batasbawah,
@@ -74,14 +74,14 @@
 	")->result_array();
             foreach ($data as $key => $value) {
                 $dimensi = $value['Nama_dimensi'];
-                $batasbawah =(($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
+                $batasbawah = (($value['jumlahSTS'] * 0) + ($value['jumlahKS'] * 1) + ($value['jumlahCS'] * 3) + ($value['jumlahS'] * 5) + ($value['jumlahSS'] * 7)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
                 $batastengah = (($value['jumlahSTS'] * 1) + ($value['jumlahKS'] * 2.5) + ($value['jumlahCS'] * 4.5) + ($value['jumlahS'] * 6.5) + ($value['jumlahSS'] * 8.5)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
                 $batasatas = (($value['jumlahSTS'] * 2) + ($value['jumlahKS'] * 4) + ($value['jumlahCS'] * 6) + ($value['jumlahS'] * 8) + ($value['jumlahSS'] * 10)) / ($value['jumlahSTS'] + $value['jumlahKS'] + $value['jumlahCS'] + $value['jumlahS'] + $value['jumlahSS']);
                 $defuz_persepsi = (($batastengah + $batasatas) / 2);
-                $hasil_batasbawah=round(($batasbawah),1);
-                $hasil_batastengah = round(($batastengah), 1);
-                $hasil_batasatas = round(($batasatas), 1);
-                $hasil_defuz = round(($defuz_persepsi), 1);
+                $hasil_batasbawah = round(($batasbawah), 2);
+                $hasil_batastengah = round(($batastengah), 2);
+                $hasil_batasatas = round(($batasatas), 2);
+                $hasil_defuz = round(($defuz_persepsi), 2);
                 $hasil = array(
                     'dimensi' => $dimensi,
                     'c' => $hasil_batasbawah,
