@@ -45,7 +45,7 @@ $role = $this->session->userdata('role');
                         </p>
                     </a>
                 <?php } ?>
-                     <?php 
+                     <!-- <?php 
                      if ( $role == 1 || $role == 0 || $role == 2 ) {
                 ?>
                     <a href="<?= base_url('Pelanggan/index'); ?>" class="nav-link ">
@@ -55,7 +55,7 @@ $role = $this->session->userdata('role');
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                     <?php } ?>
+                     <?php } ?> -->
 
                 <?php 
                if ( $role == 1 ) {
