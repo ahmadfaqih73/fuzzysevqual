@@ -48,8 +48,9 @@ Navbar -->
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="<?php echo base_url('auth/logout') ?>" role="button">
-                <i class="fas fa-th-large">logout</i>
+            <a href="<?php echo base_url('auth/logout') ?>" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt">Logout</i>
+             
             </a>
         </li>
     </ul>

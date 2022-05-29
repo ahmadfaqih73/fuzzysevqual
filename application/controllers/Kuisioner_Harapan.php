@@ -45,11 +45,11 @@ class Kuisioner_Harapan extends CI_Controller
 
             $id_dimensi = $_POST['Atribut' . $i];
 
-            $nama = $_POST['nama'];
+            // $nama = $_POST['nama'];
             $data = [
                 'pernyataan_idharapan' => $post['id_pertanyaan'][$i],
                 // 'user_id' => $this->session->userdata('userId'),
-                'user_id' => $nama,
+                'user_id' => $this->session->set_userdata('user_id'),
                 'dimensi_id' => $id_dimensi,
                 // 'kepuasan' => $kepuasan,
                 'STS' => $kepuasanSTS,
@@ -63,12 +63,12 @@ class Kuisioner_Harapan extends CI_Controller
                 'jenis' => 'Harapan'
             ];
 
-            // echo "<pre> ";
-            // print_r($data);
-            // echo "</pre>";
-            $qry = $this->db->insert('kuisioner_harapan', $data);
+            echo "<pre> ";
+            print_r($data);
+            echo "</pre>";
+            // $qry = $this->db->insert('kuisioner_harapan', $data);
         }
-        redirect('Kuisioner_Harapan');
+        // redirect('Kuisioner_Harapan');
     }
     public function getNamaUser()
     {

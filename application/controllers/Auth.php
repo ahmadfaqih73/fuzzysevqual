@@ -57,16 +57,20 @@ class Auth extends CI_Controller
         if ($check_login_r->num_rows() > 0) {
 
             $setData = array(
+                'user_id'=>$check_login_r->result()[0]->id_user,
                 'namaUser' => $check_login_r->result()[0]->fullname,
                 'role' => $check_login_r->result()[0]->Role_user
             );
 
             // Session user
             $set_session = $this->session->set_userdata($setData);
-
+            // echo "<pre> ";
+            // print_r($setData);
+            // echo "</pre>";
             redirect("Admin");
             # code...
-        } else {
+        } 
+        else {
             echo "login gagal";
         }
     }
