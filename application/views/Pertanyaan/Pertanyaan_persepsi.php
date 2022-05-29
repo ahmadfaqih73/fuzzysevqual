@@ -12,14 +12,14 @@
                         <!-- Default box -->
                         <div class="card">
                             <form method="POST" action="<?php echo base_url('Kuisioner_Persepsi/addQuisioner') ?>">
-                                <div class="card-header">
+                                <!-- <div class="card-header">
 
                                     <div class="form-group">
                                         <label>Nama Pelanggan</label>
                                         <select class="form-control" id="selectUser" autofocus="true" name="nama">
                                         </select>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card-body p-0">
                                     <?php
                                     echo $this->session->flashdata('message');
