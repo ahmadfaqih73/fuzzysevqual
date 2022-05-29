@@ -35,12 +35,17 @@ class Auth extends CI_Controller
             $data = array(
                 'fullname' => $fullname,
                 'username' => $username,
-                'password' => md5($password)
+                'password' => md5($password), 
+                'Role_user'=> "2"
             );
+            // echo "<pre> ";
+            // print_r($data);
+            // echo "</pre>";
             // var_dump($data);
             $result = $this->Model_user->simpan('users', $data);
             if ($result > 0) {
                 echo "data users berhasil disimpan";
+                redirect("Auth");
                 # code...
             } else {
                 echo "data user tidak tersimpan";
@@ -49,7 +54,7 @@ class Auth extends CI_Controller
     }
     public function login_action()
     {
-        
+
 
         $username = $this->input->post('username');
         $password = $this->input->post('password');
@@ -57,20 +62,22 @@ class Auth extends CI_Controller
         if ($check_login_r->num_rows() > 0) {
 
             $setData = array(
-                'user_id'=>$check_login_r->result()[0]->id_user,
+                'user_id' => $check_login_r->result()[0]->id_user,
                 'namaUser' => $check_login_r->result()[0]->fullname,
                 'role' => $check_login_r->result()[0]->Role_user
             );
 
             // Session user
-            $set_session = $this->session->set_userdata($setData);
+            // $set_session = 
+            $this->session->set_userdata($setData);
+
+            // echo $this->session->userdata('user_id');
             // echo "<pre> ";
             // print_r($setData);
             // echo "</pre>";
             redirect("Admin");
             # code...
-        } 
-        else {
+        } else {
             echo "login gagal";
         }
     }
@@ -78,9 +85,9 @@ class Auth extends CI_Controller
     public function logout()
     {
 
-        $array_items = array('namaUser', 'role');
+        $array_items = array('user_id', 'namaUser', 'role');
 
         $this->session->unset_userdata($array_items);
-        redirect('Auth','refresh');
+        redirect('Auth', 'refresh');
     }
 }

@@ -30,8 +30,13 @@
                         <input type="password" name="password" class="form-control" placeholder="password" value="<?= $user['password']; ?>">
                         <?= form_error('Password', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
+                    <div class="form-group">
+                        <label>Role</label>
+                        <input type="text" name="role" class="form-control" placeholder="role" value="<?= $user['Role_user']; ?>">
+                        <?= form_error('Password', '<small class="text-danger pl-3">', '</small>'); ?>
+                    </div>
                     <button type="button" class="btn btn-warning float-left" onclick="window.history.back(-1)">Kembali</button>
-                    <button type="submit" class="btn btn-success float-right">Tambah data</button>
+                    <button type="submit" class="btn btn-success float-right">Update data</button>
 
             </form>
 

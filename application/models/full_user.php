@@ -38,9 +38,11 @@ class Full_user extends CI_Model
         $fullname = $this->input->post('fullname');
         $username = $this->input->post('username');
         $password = $this->input->post('password');
+        $role= $this->input->post('role');
         $data=[
             'fullname' => $fullname,
             'username' => $username,
+            'Role_user'=> $role,
             'password' => md5($password)
         ];
         $this->db->where('id_user', $this->input->post('id'));

@@ -49,7 +49,7 @@ class Kuisioner_Harapan extends CI_Controller
             $data = [
                 'pernyataan_idharapan' => $post['id_pertanyaan'][$i],
                 // 'user_id' => $this->session->userdata('userId'),
-                'user_id' => $this->session->set_userdata('user_id'),
+                'user_id' => $this->session->userdata('user_id'),
                 'dimensi_id' => $id_dimensi,
                 // 'kepuasan' => $kepuasan,
                 'STS' => $kepuasanSTS,
@@ -57,18 +57,18 @@ class Kuisioner_Harapan extends CI_Controller
                 'CS' => $kepuasanCS,
                 'S' => $kepuasanS,
                 'SS' => $kepuasanSS,
-                
+
                 'created_at' => date('Y-m-d H:i:s'),
 
                 'jenis' => 'Harapan'
             ];
 
-            echo "<pre> ";
-            print_r($data);
-            echo "</pre>";
-            // $qry = $this->db->insert('kuisioner_harapan', $data);
+            // echo "<pre> ";
+            // print_r($data);
+            // echo "</pre>";
+            $qry = $this->db->insert('kuisioner_harapan', $data);
         }
-        // redirect('Kuisioner_Harapan');
+        redirect('Kuisioner_Harapan');
     }
     public function getNamaUser()
     {

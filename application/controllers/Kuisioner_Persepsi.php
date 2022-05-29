@@ -40,12 +40,12 @@ class Kuisioner_Persepsi extends CI_Controller
                                 $kepuasanSS = 1;
                         }
                         $id_dimensi = $_POST['Atribut' . $i];
-                        $nama = $_POST['nama'];
+                        // $nama = $_POST['nama'];
 
                         $data = [
                                 'pernyataan_persepsi_id' => $post['id_pertanyaan'][$i],
                                 // 'user_id' => $this->session->userdata('userId'),
-                                'user_id' => $nama,
+                                'user_id' => $this->session->userdata('user_id'),
                                 'dimensi_id' => $id_dimensi,
                                 'STS' => $kepuasanSTS,
                                 'KS' => $kepuasanKS,
